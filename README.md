@@ -28,7 +28,7 @@ A secure password generator with a complete login/registration system.
 - Login System: Included in the same project
 
 ## Screenshots
-![Password Generator Screenshot](https://drive.google.com/file/d/1k-1UMk5Bw4OU0_Cal3xXeycYdr-bmsy7/view?usp=sharing)
+![Password Generator Screenshot] https://drive.google.com/file/d/1k-1UMk5Bw4OU0_Cal3xXeycYdr-bmsy7/view?usp=sharing
 
 ## 👨‍💻 Author
 Abdul Haseeb
