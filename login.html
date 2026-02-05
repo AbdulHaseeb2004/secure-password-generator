@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login System</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-user-shield"></i> SECURE LOGIN SYSTEM</h1>
+            <nav>
+                <a href="index.html">Password Generator</a>
+                <a href="login.html" class="active">Login System</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="form-container" id="form-container">
+                <!-- Login Form -->
+                <div class="form active" id="login-form">
+                    <h2><i class="fas fa-sign-in-alt"></i> Login</h2>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="login-username" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="login-password" placeholder="Password" required>
+                        <button class="toggle-password" id="toggle-login-password">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-strength" id="login-password-strength">
+                        <div class="strength-bar"></div>
+                        <div class="strength-text">Password strength</div>
+                    </div>
+                    <button class="submit-btn" id="login-btn">Login</button>
+                    <p class="form-footer">
+                        Don't have an account? <a href="#" id="show-register">Register here</a>
+                    </p>
+                </div>
+
+                <!-- Registration Form -->
+                <div class="form" id="register-form">
+                    <h2><i class="fas fa-user-plus"></i> Register</h2>
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="register-username" placeholder="Choose a username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="register-email" placeholder="Email address" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-password" placeholder="Create password" required>
+                        <button class="toggle-password" id="toggle-register-password">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="register-confirm-password" placeholder="Confirm password" required>
+                        <button class="toggle-password" id="toggle-confirm-password">
+                            <i class="far fa-eye"></i>
+                        </button>
+                    </div>
+                    <div class="password-requirements">
+                        <h4>Password Requirements:</h4>
+                        <ul>
+                            <li id="req-length">At least 8 characters</li>
+                            <li id="req-uppercase">One uppercase letter</li>
+                            <li id="req-lowercase">One lowercase letter</li>
+                            <li id="req-number">One number</li>
+                            <li id="req-symbol">One special character</li>
+                            <li id="req-match">Passwords match</li>
+                        </ul>
+                    </div>
+                    <div class="password-strength" id="register-password-strength">
+                        <div class="strength-bar"></div>
+                        <div class="strength-text">Password strength</div>
+                    </div>
+                    <button class="submit-btn" id="register-btn">Create Account</button>
+                    <p class="form-footer">
+                        Already have an account? <a href="#" id="show-login">Login here</a>
+                    </p>
+                </div>
+
+                <!-- Welcome Screen (shown after successful login) -->
+                <div class="welcome-screen" id="welcome-screen">
+                    <div class="welcome-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2>Welcome, <span id="welcome-username">User</span>!</h2>
+                    <p>You have successfully logged into the secure system.</p>
+                    <div class="user-info">
+                        <div class="info-item">
+                            <i class="fas fa-user"></i>
+                            <span>Username: <strong id="info-username"></strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email: <strong id="info-email"></strong></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Joined: <strong id="info-joined"></strong></span>
+                        </div>
+                    </div>
+                    <button class="logout-btn" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i> Logout
+                    </button>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>Security Features</h3>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Secure Authentication</h4>
+                        <p>Industry-standard password hashing and encryption</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-key"></i>
+                        <h4>Password Strength Check</h4>
+                        <p>Real-time password strength evaluation</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-database"></i>
+                        <h4>Secure Storage</h4>
+                        <p>Passwords are never stored in plain text</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-user-check"></i>
+                        <h4>Session Management</h4>
+                        <p>Automatic session timeout for security</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Secure Password Generator & Login System | Created for Internship Project</p>
+        </footer>
+    </div>
+
+    <script src="login-script.js"></script>
+</body>
+</html>
