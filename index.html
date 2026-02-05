@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-lock"></i> PASSWORD GENERATOR</h1>
+            <nav>
+                <a href="index.html" class="active">Generator</a>
+                <a href="login.html">Login System</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="password-display">
+                <div class="password-box" id="password-display">
+                    <span id="password-text">Click Generate Password</span>
+                    <button id="copy-btn" title="Copy to clipboard">
+                        <i class="far fa-copy"></i>
+                    </button>
+                </div>
+                <div class="copy-message" id="copy-message">Copied!</div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="password-length">Password Length</label>
+                    <div class="length-control">
+                        <input type="range" id="password-length" min="6" max="32" value="10">
+                        <span id="length-value">10</span>
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Includes Uppercase letters (A-Z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Includes Lowercase letters (a-z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Includes Numbers (0-9)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Includes Symbols (!@#$%^&*)</label>
+                    </div>
+                </div>
+
+                <div class="strength-meter">
+                    <div class="strength-label">Strength</div>
+                    <div class="strength-bars">
+                        <div class="bar" id="bar-1"></div>
+                        <div class="bar" id="bar-2"></div>
+                        <div class="bar" id="bar-3"></div>
+                        <div class="bar" id="bar-4"></div>
+                    </div>
+                    <div class="strength-text" id="strength-text">Medium</div>
+                </div>
+
+                <button id="generate-btn" class="generate-btn">
+                    <i class="fas fa-key"></i> GENERATE PASSWORD
+                </button>
+
+                <div class="additional-options">
+                    <button id="save-btn" class="save-btn">
+                        <i class="far fa-save"></i> Save Password
+                    </button>
+                    <button id="history-btn" class="history-btn">
+                        <i class="fas fa-history"></i> View History
+                    </button>
+                </div>
+            </div>
+
+            <div class="password-history" id="password-history">
+                <h3>Password History</h3>
+                <div class="history-list" id="history-list">
+                    <!-- Password history will be populated here -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Secure Password Generator & Login System | Created for Internship Project</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
